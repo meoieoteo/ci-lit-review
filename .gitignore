@@ -1,7 +1,8 @@
 .DS_Store
 
 # Do not version control source documents
-/papers*
+/papers/*
+!/papers/.gitkeep
 
 # Temporary files that can be removed from this .gitignore once we're fully initialized
 TODOs.md
