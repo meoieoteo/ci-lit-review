@@ -1,0 +1,10 @@
+.DS_Store
+
+# Do not version control source documents
+/papers*
+
+# Temporary files that can be removed from this .gitignore once we're fully initialized
+TODOs.md
+clinical_notes_dementia_papers.md
+clinical_notes_NOT_dementia.md
+consolidated_literature_review.md
