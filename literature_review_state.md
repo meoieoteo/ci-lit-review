@@ -6,21 +6,29 @@ This file tracks where the literature review stands relative to [literature_revi
 
 ### Reviewed Papers
 
+Core reviewed papers with earlier hand-written reviews:
+
 - `lu2026_ehr_dementia_prediction_review`: Core methodological anchor for EHR dementia prediction quality, target ambiguity, label weakness, calibration gaps, and sparse external validation.
 - `adejumo2024_hf_functional_status_nlp`: Cardiology-note NLP analogue showing clinical state can be extracted from outpatient cardiovascular notes.
 - `khan2026_next_generation_efi`: Frailty/NLP analogue showing interpretable note-derived deficits can improve geriatric-risk representation.
 - `osman2024_nlp_ageing_syndromes`: Systematic review of NLP for ageing syndromes, including dementia, with validation-quality cautions.
 - `zhou2025_preoperative_frailty_llm`: Label-definition analogue showing different frailty labels can produce different learned constructs.
 
-### Summary-Only Papers
-
-These are available as neutral summaries but generally still need primary review, specialist review, and consolidation before being treated as stronger evidence:
+Newly reviewed papers with primary review, specialist reviews, and consolidated review generated from neutral summaries:
 
 - Dementia, MCI, and AD prediction/review: `john2022_dementia_prediction_validation`, `grammenos2024_explainable_mci_ad`, `grueso2021_mci_ad_ml_review`, `kumar2021_ad_progression_ml_review`, `pellegrini2018_neuroimaging_ml_review`, `amini2024_speech_ad_progression`.
 - EHR and clinical language models: `alsentzer2019_clinical_bert_embeddings`, `huang2019_clinicalbert_readmission`, `lee2019_biobert`, `yang2022_gatortron`, `singhal2022_medpalm`.
 - Longitudinal EHR representation: `choi2016_retain`, `li2020_behrt`, `rasmy2021_medbert`.
 - Causal design and target-trial framing: `liang2025_target_trial_emulation`.
 - Sequential diagnosis, feature acquisition, and decision policy: `aronsson2025_active_feature_acquisition`, `janisch2020_costly_features`, `vivar2020_peri_diagnostic_feature_acquisition`, `poh1996_information_value`, `horvitz1987_beliefs_actions_resources`, `kaelbling1998_pomdp_survey`, `heckerman1991_probabilistic_similarity_networks`, `blumlein2022_causal_tree_dtr`, `liu2018_deep_rl_dtr`, `yazzourh2025_medical_knowledge_rl_dtr`.
+
+### Review Depth Note
+
+All papers currently in the review inventory now have primary reviews, current specialist reviews, and consolidated reviews. Many reviews were generated from neutral summaries rather than deep source re-extraction. Source-document checks are still needed before relying on a paper for a central manuscript claim, exact methods claim, or quantitative performance claim.
+
+### Cross-Paper Synthesis
+
+- `synthesis/synthesis_20260709_major_ideas_and_gaps.md`: Current cross-paper synthesis of major ideas, gaps, tensions, and study-design implications.
 
 ## 1. Introduction and Clinical Motivation
 
@@ -55,7 +63,7 @@ patient_id + cardiology_encounter_id + encounter_start_time
 
 - `lu2026_ehr_dementia_prediction_review` shows that published EHR dementia models often blur diagnostic and prognostic targets.
 - `zhou2025_preoperative_frailty_llm` shows that different operational labels can make models learn different constructs.
-- `john2022_dementia_prediction_validation` is summary-only but appears important for reporting and external-validatability of dementia prediction models.
+- `john2022_dementia_prediction_validation` directly supports reporting and external-validatability concerns for dementia prediction models.
 
 ### Gaps
 
@@ -95,7 +103,7 @@ This is a core methodological problem. Diagnosis codes, cognitive tests, chart r
 
 ### Gaps
 
-- Need to run the new `label_definition_reviewer.md` on already reviewed papers.
+- Need deeper source checks for label details in the papers that become central to the label-definition section.
 - Need papers on validated dementia and cognitive-impairment EHR phenotypes.
 - Need a plan for indeterminate cases rather than forcing all patients into positive or negative labels.
 
@@ -109,7 +117,7 @@ This may be the project's most important methodological contribution. Future dia
 
 - `lu2026_ehr_dementia_prediction_review` supports the concern indirectly through diagnosis-code and documentation limitations.
 - The problem statement gives the central example: two equivalent patients may diverge because one is referred and one is not.
-- `liang2025_target_trial_emulation` is summary-only but likely relevant for formalizing cohort and causal design.
+- `liang2025_target_trial_emulation` is relevant for formalizing cohort and causal design, though its fit to the first risk-score model remains indirect.
 
 ### Gaps
 
@@ -140,17 +148,17 @@ The literature supports EHR text as a useful signal source, but the strongest cu
 
 ### Current State
 
-We have summary-level coverage of major EHR representation approaches, but little primary-review depth yet. The working hypothesis is that structured baselines and interpretable longitudinal concepts should precede more complex sequence models.
+We now have review-level coverage of major EHR representation approaches, but several reviews are summary-grounded and need source checks before detailed architecture claims. The working hypothesis is that structured baselines and interpretable longitudinal concepts should precede more complex sequence models.
 
 ### Supporting Evidence
 
 - `khan2026_next_generation_efi` supports structured plus note-derived deficit representations.
-- `choi2016_retain`, `li2020_behrt`, and `rasmy2021_medbert` are summary-only anchors for longitudinal EHR representation.
-- `alsentzer2019_clinical_bert_embeddings`, `huang2019_clinicalbert_readmission`, `lee2019_biobert`, and `yang2022_gatortron` are summary-only anchors for clinical text representation.
+- `choi2016_retain`, `li2020_behrt`, and `rasmy2021_medbert` are now reviewed anchors for longitudinal EHR representation.
+- `alsentzer2019_clinical_bert_embeddings`, `huang2019_clinicalbert_readmission`, `lee2019_biobert`, and `yang2022_gatortron` are now reviewed anchors for clinical text representation.
 
 ### Gaps
 
-- Need primary reviews of RETAIN, BEHRT, Med-BERT, ClinicalBERT, and GatorTron.
+- Need deeper source checks of RETAIN, BEHRT, Med-BERT, ClinicalBERT, and GatorTron before using them for detailed architecture or performance claims.
 - Need to decide how much temporality is required for the first model.
 - Need comparison of interpretable concept features versus raw note embeddings.
 
@@ -184,11 +192,11 @@ Validation is a major weakness in the literature and must be designed from day o
 - `lu2026_ehr_dementia_prediction_review` is the primary anchor: external validation and calibration are sparse in EHR dementia prediction.
 - `osman2024_nlp_ageing_syndromes` shows external validation is also limited in ageing-syndrome NLP.
 - `adejumo2024_hf_functional_status_nlp` shows useful multi-site validation within one health system, but not broader external validation.
-- `john2022_dementia_prediction_validation` is summary-only but likely important enough to prioritize for review.
+- `john2022_dementia_prediction_validation` is now reviewed and should be prioritized for source-checking before manuscript use.
 
 ### Gaps
 
-- Need to run the new `validation_reviewer.md` on existing reviewed papers.
+- Need deeper source checks for validation details in the papers that become central to the validation section.
 - Need to define temporal validation and site/practice validation options for our data.
 - Need clinical thresholds tied to cardiology workflow.
 - Need decision-curve or net-benefit framing if a score will guide action.
@@ -218,12 +226,12 @@ This is future framing, not the first model's scope. The first model should scor
 
 ### Supporting Evidence
 
-- `aronsson2025_active_feature_acquisition`, `janisch2020_costly_features`, `vivar2020_peri_diagnostic_feature_acquisition`, `poh1996_information_value`, `horvitz1987_beliefs_actions_resources`, and `kaelbling1998_pomdp_survey` are summary-only anchors.
+- `aronsson2025_active_feature_acquisition`, `janisch2020_costly_features`, `vivar2020_peri_diagnostic_feature_acquisition`, `poh1996_information_value`, `horvitz1987_beliefs_actions_resources`, and `kaelbling1998_pomdp_survey` are now reviewed anchors.
 - The 20260706 synthesis concluded these papers belong later but help frame future "what should the cardiologist do next?" work.
 
 ### Gaps
 
-- Need primary reviews only after the risk-score target and label strategy are better settled.
+- Need deeper source checks only after the risk-score target and label strategy are better settled.
 - Need to avoid drifting into action recommendation before the first model is defined.
 - Need a later synthesis that connects risk scores to value-of-information or feature-acquisition policies.
 
@@ -244,8 +252,7 @@ The emerging contribution is not a new architecture by itself. The likely contri
 
 ### Gaps
 
-- Need consolidated reviews for papers already reviewed.
-- Need a formal cross-paper synthesis after consolidation.
+- Need to act on the cross-paper synthesis recommendations.
 - Need a human decision on target, outcome window, and acceptable label source.
 
 ## 13. Open Questions
@@ -268,16 +275,15 @@ The emerging contribution is not a new architecture by itself. The likely contri
 
 ### Workflow Questions
 
-- Which reviewed papers need `label_definition_reviewer.md`?
-- Which reviewed papers need `validation_reviewer.md`?
+- Which consolidated papers need source-level deepening before manuscript drafting?
+- Which central papers need exact label and validation extraction from the PDF or supplement?
 - Should we add an NLP/concept-extraction specialist reviewer?
 - Should we add an EHR schema/common-data-model specialist reviewer?
-- Which summary-only papers should be reviewed next?
 
 ## Near-Term Priorities
 
-1. Run `review_consolidator.md` on the five currently reviewed papers.
-2. Run `label_definition_reviewer.md` and `validation_reviewer.md` on the highest-value reviewed papers, especially `lu2026_ehr_dementia_prediction_review`, `zhou2025_preoperative_frailty_llm`, `osman2024_nlp_ageing_syndromes`, and `khan2026_next_generation_efi`.
-3. Prioritize primary review of `john2022_dementia_prediction_validation`.
-4. Build the first cognitive/frailty note-concept inventory.
-5. Decide the first candidate target and outcome window with MD input.
+1. Decide the first candidate target and outcome window with MD input.
+2. Build the first cognitive/frailty note-concept inventory.
+3. Source-check the highest-value papers before manuscript use, especially `lu2026_ehr_dementia_prediction_review`, `john2022_dementia_prediction_validation`, `zhou2025_preoperative_frailty_llm`, `adejumo2024_hf_functional_status_nlp`, `khan2026_next_generation_efi`, and `liang2025_target_trial_emulation`.
+4. Use `searcher.md` to find direct cardiology cognitive-screening, referral, and care-gap literature.
+5. Add NLP/concept-extraction and EHR schema/common-data-model specialist reviewers.
