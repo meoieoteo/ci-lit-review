@@ -47,10 +47,13 @@ Unless the human directs otherwise, a full review includes:
 
 1. The primary reviewer.
 2. Every specialist reviewer defined in [agents/specialist_reviewers/](specialist_reviewers/).
+3. The review consolidator defined in [agents/review_consolidator.md](review_consolidator.md).
 
 For this default execution rule, call every Markdown agent definition in [agents/specialist_reviewers/](specialist_reviewers/) except template files. Files with names ending in `_template.md` are instructions for creating reviewers, not reviewers to execute.
 
 Specialist reviewers should run after the primary review exists, because the primary review establishes the general mapping from the paper to the [problem statement](../problem_statement.md).
+
+The review consolidator should run after the specialist reviews exist, because it integrates the primary and specialist findings into a single-paper evidence note.
 
 ## Review Directory Layout
 Use this layout for each reviewed paper:
@@ -59,6 +62,7 @@ Use this layout for each reviewed paper:
 reviews/citation_key/
   primary_review.md
   specialist_reviewer_name.md
+  consolidated_review.md
 ```
 
 Rules:
@@ -66,6 +70,7 @@ Rules:
 - The primary reviewer always writes `primary_review.md`.
 - Each specialist reviewer writes one file named after its agent file.
 - For example, `agents/specialist_reviewers/validation_reviewer.md` writes `reviews/citation_key/validation_reviewer.md`.
+- The review consolidator writes `consolidated_review.md`.
 - Do not write review output into the neutral summary file unless the human explicitly asks for that format.
 - Do not overwrite another reviewer's file.
 
@@ -155,5 +160,6 @@ A primary reviewer task is complete when:
 - The paper's relationship to the problem statement is clear.
 - Direct support and non-support are separated.
 - The default specialist reviewers in [agents/specialist_reviewers/](specialist_reviewers/) have been called unless the human directed otherwise.
+- The review consolidator has been called unless the human directed otherwise.
 - Additional specialist review needs are listed.
 - Major uncertainty is preserved rather than resolved by assumption.
