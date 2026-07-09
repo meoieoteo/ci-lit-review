@@ -12,6 +12,8 @@ We are conducting a literature review of papers relevant to our [problem stateme
 - [papers/](papers/) contains PDF downloads of the papers. This is not version controlled because the material may be copyrighted, and we may version this repo in a public origin.
 - [summaries/](summaries/) contains AI-generated summaries of each paper and any supplemental material. We expect these summaries to change over time as we refine what we are looking for.
 - [reviews/](reviews/) contains review outputs. Each reviewed paper gets its own subdirectory named with the BibTeX citation key.
+- [literature_review_outline.md](literature_review_outline.md) contains the simple human-facing outline of the review.
+- [literature_review_state.md](literature_review_state.md) tracks current evidence, gaps, and priorities relative to the outline.
 - [bibliography/](bibliography/) contains the BibTeX of the complete set of references. We expect this to be a strict superset of what we actually reference in our papers.
 - [agents/](agents/) contains agent definitions for the literature-review workflow.
 
@@ -31,3 +33,7 @@ The default paper workflow is layered:
 The summarizer and primary reviewer are intentionally separate. The summarizer describes the paper without judging it. The primary reviewer interprets how the paper contributes to this literature review. Specialist reviewers assess bounded dimensions such as clinical relevance, EHR schema implications, NLP/modeling, causal bias, validation quality, target-trial design, and skeptical review.
 
 Cross-paper synthesis is handled by the [synthesizer](agents/synthesizer.md). The synthesizer looks across reviewed papers to identify major ideas, gaps, tensions, and implications for the review and study design. It is separate from the review consolidator, which works on one paper at a time.
+
+The [literature review state manager](agents/literature_review_state_manager.md) maintains [literature_review_state.md](literature_review_state.md) relative to [literature_review_outline.md](literature_review_outline.md). Keep the outline simple; put evidence status, gaps, and priorities in the state file.
+
+The [searcher](agents/searcher.md) uses the outline and state file to find candidate papers online that fill gaps, support claims, or challenge claims. Candidate papers selected by the human still enter the default paper workflow through the bibliographer, downloader, shelver, summarizer, reviewers, consolidator, and state manager.

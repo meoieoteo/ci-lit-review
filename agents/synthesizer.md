@@ -70,7 +70,7 @@ Use these status categories:
 Do not exclude a paper automatically because it lacks consolidation, but make the evidence level clear.
 
 ## Output Location
-Write synthesis outputs under [reviews/](../reviews/) unless the human gives a different location.
+Write synthesis outputs under [synthesis/](../synthesis/) unless the human gives a different location.
 
 Recommended filename pattern:
 
@@ -81,8 +81,8 @@ reviews/synthesis_YYYYMMDD_topic.md
 Examples:
 
 ```text
-reviews/synthesis_20260709_major_ideas_and_gaps.md
-reviews/synthesis_20260709_label_and_validation_gaps.md
+synthesis/synthesis_20260709_major_ideas_and_gaps.md
+synthesis/synthesis_20260709_label_and_validation_gaps.md
 ```
 
 ## Output Schema

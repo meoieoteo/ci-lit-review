@@ -57,6 +57,8 @@ Classify the request as one or more:
 - `full_paper_workflow`
 - `review_update`
 - `cross_paper_synthesis`
+- `literature_review_state_update`
+- `literature_search`
 - `study_design`
 - `workflow_maintenance`
 - `bibliography_maintenance`
@@ -140,6 +142,28 @@ Prefer inputs in this order:
 4. Source documents.
 
 When consolidated reviews are missing for otherwise reviewed papers, either run the review consolidator first or mark the synthesis as limited by missing consolidation.
+
+### Literature Review State Updates
+For tasks that ask to update the state of the literature review, use the [literature review state manager](literature_review_state_manager.md).
+
+The state manager maintains:
+
+```text
+literature_review_state.md
+```
+
+relative to:
+
+```text
+literature_review_outline.md
+```
+
+Keep the outline simple and human-editable. Put evidence status, gaps, and priorities in the state file.
+
+### Literature Search
+For tasks that ask to find papers online, fill literature gaps, support an outline claim, or find counterevidence, use the [searcher](searcher.md).
+
+The searcher uses [literature_review_outline.md](../literature_review_outline.md) and [literature_review_state.md](../literature_review_state.md) to decide what evidence is missing. It recommends candidate papers; selected papers still enter the default paper workflow through the bibliographer, downloader, shelver, summarizer, reviewers, consolidator, and state manager.
 
 ### Study Design Work
 For study-design tasks, use:
