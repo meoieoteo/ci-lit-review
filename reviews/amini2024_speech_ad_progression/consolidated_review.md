@@ -60,3 +60,6 @@ The paper informs the study design mainly through dementia, MCI, or Alzheimer di
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review treats this as cognitive-language evidence from speech transcripts, not routine EHR-note concept extraction. The EHR schema/CDM review adds that the Framingham speech and neuropsychological data structure has minimal direct relevance to Epic encounter-level transformation.

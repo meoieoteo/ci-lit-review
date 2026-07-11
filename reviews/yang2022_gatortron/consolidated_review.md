@@ -60,3 +60,6 @@ The paper informs the study design mainly through clinical language model or med
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review treats GatorTron as important clinical LLM background, not a substitute for local concept annotation and validation. The EHR schema/CDM review adds that the UF clinical-note corpus supports text-model context but does not supply this project's encounter-level Epic extraction or CDM mapping.

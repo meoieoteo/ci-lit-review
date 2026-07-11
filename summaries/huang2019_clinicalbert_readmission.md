@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [ClinicalBERT, BERT]
   learning_setup: [self_supervised_learning, supervised_learning]
   input_modalities: [clinical_notes]
+  input_representation: [raw_text, document_chunks, sequence_tokens, dense_embeddings, event_sequence, time_aware_sequence]
   prediction_task: [binary_classification, risk_prediction, representation_learning]
   temporal_handling: [longitudinal_history, visit_sequence]
   interpretability: [attention]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # huang2019_clinicalbert_readmission
@@ -60,7 +61,7 @@ The authors pre-train BERT on clinical notes and fine-tune it for readmission pr
 The core method is transformer-based clinical language-model pre-training plus supervised fine-tuning.
 
 ### Model Inputs and Representations
-ClinicalBERT creates contextual representations of note text and aggregates note information across the patient timeline.
+ClinicalBERT creates contextual representations of tokenized note text and aggregates note information across the patient timeline during hospitalization. The input can accommodate variable note text and multiple notes over time, but this summary does not extract whether irregular time gaps are explicitly encoded beyond the dynamic accumulation of notes.
 
 ### Baselines or Comparators
 Comparators include other clinical text representation methods such as Word2Vec and FastText, plus readmission-model baselines.

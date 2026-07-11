@@ -277,8 +277,8 @@ The emerging contribution is not a new architecture by itself. The likely contri
 
 - Which consolidated papers need source-level deepening before manuscript drafting?
 - Which central papers need exact label and validation extraction from the PDF or supplement?
-- Should we add an NLP/concept-extraction specialist reviewer?
-- Should we add an EHR schema/common-data-model specialist reviewer?
+- Which NLP/concept-extraction specialist findings should be promoted into the first note-concept inventory?
+- Which EHR schema/common-data-model findings should be promoted into the Epic-to-model-ready pipeline specification?
 
 ## Near-Term Priorities
 
@@ -286,4 +286,4 @@ The emerging contribution is not a new architecture by itself. The likely contri
 2. Build the first cognitive/frailty note-concept inventory.
 3. Source-check the highest-value papers before manuscript use, especially `lu2026_ehr_dementia_prediction_review`, `john2022_dementia_prediction_validation`, `zhou2025_preoperative_frailty_llm`, `adejumo2024_hf_functional_status_nlp`, `khan2026_next_generation_efi`, and `liang2025_target_trial_emulation`.
 4. Use `searcher.md` to find direct cardiology cognitive-screening, referral, and care-gap literature.
-5. Add NLP/concept-extraction and EHR schema/common-data-model specialist reviewers.
+5. Use the NLP/concept-extraction and EHR schema/common-data-model specialist reviewer findings to refine the note-concept inventory and Epic-to-model-ready pipeline specification.

@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct EHR text or schema role. The paper may later inform observed/missing/acquirable feature metadata and acquisition costs, but it is not part of the first EHR text or Epic pipeline argument.

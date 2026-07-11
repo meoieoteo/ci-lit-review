@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct NLP extraction or EHR schema contribution. Its remaining value is future value-of-information framing after clinical actions and information costs are defined.

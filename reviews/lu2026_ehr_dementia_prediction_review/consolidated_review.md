@@ -55,7 +55,7 @@ External validation, calibration, thresholds, and reporting are insufficient in 
 Diagnosis-code labels can reflect referral, testing, documentation, coding, and specialist access.
 
 ## Implications for Study Design
-The study should anchor rows at cardiology encounter start, use only pre-index predictors, define labels and outcome windows explicitly, and pre-plan calibration and validation.
+The study should anchor rows at cardiology encounter start, use only pre-index predictors, define labels and outcome windows explicitly, pre-plan calibration and validation, and state whether inputs are fixed engineered features, note-derived concepts, embeddings, or variable-length/time-aware EHR sequences.
 
 ## Claims to Carry Forward
 - EHR dementia prediction models are often high risk of bias.
@@ -72,3 +72,6 @@ The study should anchor rows at cardiology encounter start, use only pre-index p
 
 ## Recommended Next Action
 Use this paper as the core quality anchor in the state file and cross-paper synthesis.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review strengthens this paper as the main cautionary anchor for using EHR text in dementia prediction: text features need interpretable definitions, source-document timing, and validation. The EHR schema/CDM review adds that it should anchor the pipeline checklist for source population, index time, lookback, horizon, predictor domains, label provenance, and validation split. The summary backfill adds that the field mixes fixed engineered features, text features, embeddings, and underreported representations, so our review should not imply that EHR dementia prediction has converged on a single input representation.

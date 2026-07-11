@@ -52,7 +52,7 @@ External validation and recalibration require full model specification and commo
 The paper does not directly analyze downstream-action bias, but it reinforces the reporting needed to detect it.
 
 ## Implications for Study Design
-Our study should publish enough detail for external validation: index date, observation window, prediction horizon, label algorithm, full predictor definitions, model specification, baseline risk, calibration, and validation design.
+Our study should publish enough detail for external validation: index date, observation window, prediction horizon, label algorithm, full predictor definitions, model specification, baseline risk, calibration, and validation design. If we use sequence models or text-derived representations rather than fixed structured OMOP predictors, those representations will need equally explicit reusable definitions.
 
 ## Claims to Carry Forward
 - Existing dementia prediction models are frequently underreported for external validation.
@@ -69,3 +69,6 @@ Our study should publish enough detail for external validation: index date, obse
 
 ## Recommended Next Action
 Use this paper to strengthen the validation section of `literature_review_state.md` and prioritize exact source checks before manuscript citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review adds that any future note-derived concepts must be reported at a level that permits external validation. The EHR schema/CDM review strengthens this paper's role as a central OMOP/OHDSI reproducibility and external-validation anchor, even though its models are patient-level and mostly structured-data oriented. The summary backfill clarifies that the validated models are largely fixed-feature OMOP predictor sets rather than variable-length EHR sequence models.

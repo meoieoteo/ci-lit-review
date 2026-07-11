@@ -45,7 +45,7 @@ The paper compares predictive accuracy, scalability, and interpretability agains
 The paper does not resolve downstream-action or diagnosis-opportunity bias for this project unless later source review shows otherwise.
 
 ## Implications for Study Design
-The paper informs the study design mainly through longitudinal EHR representation background. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
+The paper informs the study design mainly through longitudinal EHR representation background. It is specifically relevant when considering variable-length visit-sequence inputs rather than fixed-length feature vectors. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
 
 ## Claims to Carry Forward
 - The paper is relevant to longitudinal EHR representation background.
@@ -60,3 +60,6 @@ The paper informs the study design mainly through longitudinal EHR representatio
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review clarifies that RETAIN is not a text-extraction method, but note-derived concepts could later be encoded as visit-level variables. The EHR schema/CDM review strengthens its role as a model-ready longitudinal visit-sequence representation source, with the caveat that Epic encounter grouping and pre-index cutoffs must be locally defined. The summary backfill adds that RETAIN should be treated as a variable-length sequence model, not a fixed-length tabular baseline.

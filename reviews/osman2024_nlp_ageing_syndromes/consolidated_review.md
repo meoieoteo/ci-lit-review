@@ -66,3 +66,6 @@ Use this paper to justify careful diagnostic-accuracy reporting and external val
 
 ## Recommended Next Action
 Use as background in EHR-text and validation sections; search for and intake the dementia-specific included studies.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review strengthens this as a major ageing-syndrome EHR NLP source and a candidate source for concept families such as cognition, frailty, falls, delirium, function, and social context. The EHR schema/CDM review adds that it is useful for note-source and validation-quality cautions, but not as a unified Epic or CDM implementation template.

@@ -11,7 +11,6 @@ Indirect fit to the current pre-cardiology cognitive-risk project. Its main valu
 
 ## Evidence Category
 - `longitudinal_ehr_representation`
-- `unstructured_ehr_text`
 
 ## Clinical Target
 Disease-prediction outcomes for heart failure and pancreatic cancer.
@@ -22,7 +21,7 @@ Large structured EHR datasets used for pre-training and downstream disease-predi
 Population: Pre-training used 28,490,650 patient EHR records. Fine-tuning used three cohorts across two disease-prediction tasks.
 
 ## EHR Text Relevance
-Relevant because the paper concerns clinical text, NLP, speech/language, or language-model methods.
+Low direct EHR-text relevance. Med-BERT models structured diagnosis-code sequences rather than clinical-note text.
 
 Inputs or predictors: Structured diagnosis-code sequences from EHR.
 
@@ -36,7 +35,7 @@ Observation window: Longitudinal EHR diagnosis histories before prediction.
 Prediction horizon or follow-up: Varied by task; evaluated tasks included heart failure in patients with diabetes and pancreatic cancer prediction.
 
 ## Modeling Relevance
-The authors adapt BERT for structured EHR visits, modify layer representations for EHR structure, and add a domain-specific pre-training task before fine-tuning.
+The authors adapt BERT for structured EHR visits, modify layer representations for EHR structure, and add a domain-specific pre-training task before fine-tuning. The model consumes variable-length visit/code sequences rather than a single fixed-length predictor vector, although detailed irregular-time handling was not extracted in the summary.
 
 ## Validation and Utility Signals
 AUC improvement across three fine-tuning cohorts and experiments with small training sample sizes.

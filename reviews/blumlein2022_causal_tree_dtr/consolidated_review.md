@@ -60,3 +60,6 @@ The paper informs the study design mainly through dynamic treatment regime or re
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review finds no direct text relevance. The EHR schema/CDM review adds modest indirect relevance for representing longitudinal states, treatments, and outcomes if the project later moves from pre-encounter risk scoring to action-policy learning.

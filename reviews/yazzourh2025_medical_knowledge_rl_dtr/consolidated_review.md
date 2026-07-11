@@ -60,3 +60,6 @@ The paper informs the study design mainly through dynamic treatment regime or re
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct EHR text or first-pipeline schema contribution. The paper remains future background for representing patient states, actions, rewards, histories, and expert knowledge in policy-learning work.

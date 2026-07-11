@@ -43,7 +43,7 @@ All reviews agree that the concept-feature strategy is valuable but indirect.
 No major disagreement. The main tension is promise for feature design versus weak direct fit to the cardiology target.
 
 ## Label, Target, and Timing Takeaways
-The eFI is a frailty-deficit construct, not a cognitive impairment label. It illustrates how note concepts can be longitudinally represented.
+The eFI is a frailty-deficit construct, not a cognitive impairment label. It illustrates how longitudinal structured and text evidence can be collapsed into fixed binary deficit/concept features.
 
 ## Validation and Transportability Takeaways
 Internal validation and comparator-index performance are useful; cross-system transport remains unproven.
@@ -56,6 +56,7 @@ Use this to seed candidate note concepts: neurocognitive problems, falls, mobili
 
 ## Claims to Carry Forward
 - Interpretable note-derived deficits are a plausible middle path between structured data and opaque text embeddings.
+- A fixed-length concept-feature representation can preserve clinical interpretability while using longitudinal EHR and note evidence upstream.
 
 ## Claims to Treat Cautiously
 - That eFI-style deficits directly measure dementia or unmet cognitive care need.
@@ -67,3 +68,6 @@ Use this to seed candidate note concepts: neurocognitive problems, falls, mobili
 
 ## Recommended Next Action
 Use this paper when building the first cognitive/frailty note-concept inventory.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review strengthens this paper as a central source for interpretable note-derived geriatric deficits, including neurocognitive, functional, falls, sensory, loneliness, and assistance-needs concepts. The EHR schema/CDM review adds that it is a strong structured-plus-text representation analogue, but local Epic vocabularies, note metadata, and pre-index timestamps would need explicit mapping. The summary backfill clarifies that the final eFI is a fixed-length concept-feature representation built from longitudinal evidence, not a variable-length sequence model.

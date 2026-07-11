@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [GatorTron, BERT]
   learning_setup: [self_supervised_learning, supervised_learning]
   input_modalities: [clinical_notes]
+  input_representation: [raw_text, sequence_tokens, dense_embeddings]
   prediction_task: [representation_learning, phenotyping]
   temporal_handling: [not_applicable]
   interpretability: [none_reported]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # yang2022_gatortron
@@ -60,7 +61,7 @@ The authors train GatorTron models at base, medium, and large scales, up to 8.9 
 The core method is large transformer language-model pre-training for clinical text.
 
 ### Model Inputs and Representations
-Clinical text is represented through large-scale contextual language-model embeddings.
+Clinical text is represented as token sequences with large-scale contextual language-model embeddings. GatorTron is a clinical text representation model for NLP benchmark tasks, not a patient-level fixed-length EHR feature model or a longitudinal timing model.
 
 ### Baselines or Comparators
 Existing biomedical and clinical transformer models.

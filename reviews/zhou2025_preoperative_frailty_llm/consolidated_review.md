@@ -67,3 +67,6 @@ Candidate cognitive labels should be compared against each other before model de
 
 ## Recommended Next Action
 Use this paper in the label-definition section and in study-design discussions about candidate labels.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review strengthens this paper as a warning against treating direct transformer note classification as interpretable concept extraction. The EHR schema/CDM review adds that the VES-13 versus eFI contrast is a schema and provenance lesson: every candidate label needs source, evidence date, and construct class recorded.

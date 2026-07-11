@@ -67,4 +67,7 @@ Supports building interpretable note-derived concepts and validating them locall
 - How much local annotation is required for reliable transfer?
 
 ## Recommended Next Action
-Use this paper in the EHR-text and note-concept sections; add an NLP/concept-extraction specialist reviewer if this method becomes central.
+Use this paper in the EHR-text and note-concept sections; source-check the supplement for annotation, sectioning, and Epic extraction details.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review strengthens this paper's role as a central cardiology-note concept-extraction analogue. The EHR schema/CDM review adds that the Epic Clarity and note-sectioning details are highly relevant to local implementation, but the paper should not be treated as an OMOP or common-data-model template.

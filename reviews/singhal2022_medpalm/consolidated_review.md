@@ -60,3 +60,6 @@ The paper informs the study design mainly through clinical language model or med
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews narrow Med-PaLM to medical LLM background. It should not be cited as evidence for EHR note concept extraction, direct risk scoring, or data transformation because it is a medical question-answering benchmark/alignment study.

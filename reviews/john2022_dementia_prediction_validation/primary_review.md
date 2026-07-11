@@ -30,7 +30,7 @@ Low direct relevance. The externally validated models use structured observation
 Moderate to high. The paper focuses on incident dementia prediction and evaluates whether target/outcome definitions are reported well enough for external validation. It does not solve dementia label validity, but it demonstrates that even published models often fail to report the details needed to reconstruct labels and time-at-risk.
 
 ## Modeling Relevance
-The paper validates existing models rather than proposing a new architecture. It covers traditional statistical and machine-learning approaches and uses OHDSI patient-level prediction infrastructure. The modeling lesson is that deployability depends on full specification and validation, not just algorithm choice.
+The paper validates existing models rather than proposing a new architecture. It covers traditional statistical and machine-learning approaches and uses OHDSI patient-level prediction infrastructure. The validated predictors are primarily fixed-length structured feature sets derived from OMOP observational health data, such as demographics, diagnosis-code indicators, medication-derived predictors, and model risk-score components. The modeling lesson is that deployability depends on full specification and validation, not just algorithm choice.
 
 ## Validation and Utility Signals
 This is the paper's strongest contribution. The authors found that only a minority of published models reported enough information for full external validation; only three selected models were externally validated. Some models transported reasonably to some databases, but missing baseline hazard or full model specification limited recalibration and reuse.

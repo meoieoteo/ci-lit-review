@@ -60,3 +60,6 @@ The paper informs the study design mainly through dementia, MCI, or Alzheimer di
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews narrow this paper to broad AD progression ML background. It mentions clinical notes as a possible modality but does not provide enough EHR NLP, annotation, schema, or CDM detail to guide this project's pipeline.

@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [BERT, BioBERT, Clinical BERT, Discharge Summary BERT]
   learning_setup: [self_supervised_learning, supervised_learning]
   input_modalities: [clinical_notes]
+  input_representation: [raw_text, sequence_tokens, dense_embeddings]
   prediction_task: [representation_learning, phenotyping]
   temporal_handling: [not_applicable]
   interpretability: [none_reported]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # alsentzer2019_clinical_bert_embeddings
@@ -60,7 +61,7 @@ The authors trained Clinical BERT from BERT-Base and Clinical BioBERT from BioBE
 The core method is transformer language-model pre-training followed by task-specific supervised fine-tuning.
 
 ### Model Inputs and Representations
-The model represents clinical text with contextual token embeddings learned from clinical notes.
+The model represents tokenized clinical text with contextual token embeddings learned from clinical notes. The representation is text-sequence based for NLP tasks, not a patient-level fixed-length EHR feature vector and not a longitudinal EHR timing model.
 
 ### Baselines or Comparators
 General-domain BERT and BioBERT are the main comparators.

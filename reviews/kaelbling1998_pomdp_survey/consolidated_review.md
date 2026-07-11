@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct role in NLP extraction or EHR schema design. The paper remains a later sequential-decision reference for partial observability, states, observations, actions, and rewards.

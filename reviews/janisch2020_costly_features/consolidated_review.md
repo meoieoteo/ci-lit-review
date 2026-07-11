@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct EHR text or schema contribution. The paper may later inform feature availability and acquisition-cost fields, but it should stay out of the first risk-score data-transformation and NLP sections.

@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [Med-BERT, BERT, GRU, Bi-GRU, RETAIN]
   learning_setup: [self_supervised_learning, supervised_learning]
   input_modalities: [structured_ehr, diagnosis_codes]
+  input_representation: [visit_sequence, sequence_tokens, time_aware_sequence]
   prediction_task: [risk_prediction, binary_classification, representation_learning]
   temporal_handling: [visit_sequence, longitudinal_history]
   interpretability: [attention]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # rasmy2021_medbert
@@ -60,7 +61,7 @@ The authors adapt BERT for structured EHR visits, modify layer representations f
 The core method is transformer pre-training on structured EHR code sequences followed by supervised fine-tuning.
 
 ### Model Inputs and Representations
-Diagnosis codes are represented as contextualized embeddings over patient visit sequences.
+Diagnosis codes are represented as contextualized embeddings over variable-length patient visit sequences. Med-BERT consumes structured EHR code sequences rather than a single fixed-length feature vector, though the summary does not extract detailed handling of irregular time gaps.
 
 ### Baselines or Comparators
 GRU, Bi-GRU, and RETAIN predictive models.

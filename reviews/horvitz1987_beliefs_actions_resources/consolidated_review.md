@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm this paper has no EHR text or schema implementation role. Its relevance is limited to later resource-aware action and information-value framing.

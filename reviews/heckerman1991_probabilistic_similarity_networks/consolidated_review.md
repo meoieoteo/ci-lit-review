@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct NLP or EHR schema contribution. The paper remains useful only for later diagnostic reasoning over already-defined findings, not for extracting or representing Epic EHR features.

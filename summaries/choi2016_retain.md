@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [RETAIN, reverse-time attention, GRU]
   learning_setup: [supervised_learning]
   input_modalities: [structured_ehr, diagnosis_codes, medications, procedures]
+  input_representation: [visit_sequence, sequence_tokens, time_aware_sequence]
   prediction_task: [binary_classification, risk_prediction]
   temporal_handling: [visit_sequence, longitudinal_history]
   interpretability: [attention]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # choi2016_retain
@@ -60,7 +61,7 @@ RETAIN uses a two-level attention architecture over visits and variables, proces
 The core method is a recurrent neural network with reverse-time attention designed for interpretability.
 
 ### Model Inputs and Representations
-Each patient is represented as a sequence of visits containing high-dimensional clinical variables.
+Each patient is represented as a variable-length sequence of visits containing high-dimensional clinical variables. RETAIN does not collapse the entire EHR history into a single fixed-length tabular vector before modeling; it consumes ordered visit sequences and uses reverse-time recurrent processing with visit-level and variable-level attention.
 
 ### Baselines or Comparators
 Comparators include traditional models and RNN variants.

@@ -21,6 +21,11 @@ ml_ai_methods:
     - diagnosis_codes
     - procedures
     - demographics
+  input_representation:
+    - raw_text
+    - document_chunks
+    - sequence_tokens
+    - dense_embeddings
   prediction_task:
     - multiclass_classification
     - phenotyping
@@ -31,7 +36,7 @@ ml_ai_methods:
     - saliency
     - feature_importance
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # adejumo2024_hf_functional_status_nlp
@@ -78,7 +83,7 @@ The authors fine-tuned a ClinicalBERT-based model for two document classificatio
 The core method is supervised transformer-based clinical NLP using ClinicalBERT. The paper also uses MedSpaCy for sectioning and SHAP for token-level interpretability.
 
 ### Model Inputs and Representations
-The model consumed selected sections of clinical notes. The supplemental material states that MedSpaCy sectioning removed less relevant sections such as past medical history, labs, physical exam, medications, family history, imaging, and review of systems.
+The model consumed selected sections of outpatient clinical notes as tokenized text for ClinicalBERT classification. The supplemental material states that MedSpaCy sectioning removed less relevant sections such as past medical history, labs, physical exam, medications, family history, imaging, and review of systems. The task is note-level/document-level extraction rather than a longitudinal EHR sequence model; timing is handled through note selection rather than explicit irregular-time modeling.
 
 ### Baselines or Comparators
 The main comparator was expert EHR abstraction. The deployment analysis compared functional-status capture using explicit NYHA mentions alone versus explicit mentions plus NLP-based symptom recategorization.

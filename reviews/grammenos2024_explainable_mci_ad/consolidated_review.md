@@ -60,3 +60,6 @@ The paper informs the study design mainly through dementia, MCI, or Alzheimer di
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews narrow the paper's contribution to cognitive-prediction context. It does not inform EHR note concept extraction or Epic/CDM data transformation because ADNI/ADNIMERGE variables are standardized research data rather than operational cardiology EHR data.

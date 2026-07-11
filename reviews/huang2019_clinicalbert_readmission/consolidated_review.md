@@ -60,3 +60,6 @@ The paper informs the study design mainly through clinical language model or med
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review classifies ClinicalBERT readmission work as text-representation background rather than interpretable concept extraction. The EHR schema/CDM review adds that it should not be used as an encounter-level or Epic-to-model-ready data pipeline source.

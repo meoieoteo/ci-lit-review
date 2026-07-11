@@ -28,6 +28,13 @@ ml_ai_methods:
     - procedures
     - demographics
     - other
+  input_representation:
+    - fixed_length_vector
+    - engineered_features
+    - concept_features
+    - dense_embeddings
+    - raw_text
+    - not_reported
   prediction_task:
     - binary_classification
     - risk_prediction
@@ -43,7 +50,7 @@ ml_ai_methods:
     - calibration
     - none_reported
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # lu2026_ehr_dementia_prediction_review
@@ -90,7 +97,7 @@ The review included 56 studies, 434 developed prediction models, and 155 externa
 The paper is itself a systematic review, not a new model-development study. It indexes and compares statistical, machine-learning, deep-learning, and hybrid EHR prediction models. Across included models, 129 used statistical methods, 193 used machine learning, 96 used deep learning, and 10 used combined methods. The authors report no major internal-validation AUROC advantage for AI methods over traditional statistical methods.
 
 ### Model Inputs and Representations
-Most models used structured EHR data only: 347 of 434 models. Forty-six models used unstructured data only, and 41 used both structured and unstructured EHR data. Unstructured data representations included simple keyword approaches, text-derived features, embeddings, and topic or engineered NLP features.
+Most models used structured EHR data only: 347 of 434 models. Forty-six models used unstructured data only, and 41 used both structured and unstructured EHR data. Across included studies, input representations were heterogeneous and often incompletely reported. Many models appear to have used fixed-length engineered feature sets from structured EHR history, while unstructured data representations included simple keyword approaches, text-derived concept or topic features, embeddings, and other engineered NLP features. The review does not support a single classification of all included models as either fixed-vector or variable-length time-aware EHR sequence models.
 
 ### Baselines or Comparators
 The review compared models descriptively by data type, model type, validation level, and modeling method. It compared apparent, internal, and external validation AUROC; structured versus unstructured versus combined EHR data; diagnostic versus prognostic models; and statistical versus AI-based methods.

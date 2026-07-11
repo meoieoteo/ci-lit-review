@@ -25,6 +25,11 @@ ml_ai_methods:
     - labs
     - medications
     - procedures
+  input_representation:
+    - fixed_length_vector
+    - engineered_features
+    - concept_features
+    - raw_text
   prediction_task:
     - risk_prediction
     - survival_time_to_event
@@ -37,7 +42,7 @@ ml_ai_methods:
     - concept_features
     - calibration
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # khan2026_next_generation_efi
@@ -84,7 +89,7 @@ The authors constructed a deficit-accumulation eFI with equally weighted binary 
 The AI component is concept extraction from clinical notes using deep-learning NLP-NER. The risk models themselves are statistical survival/count models using the constructed eFI as a predictor.
 
 ### Model Inputs and Representations
-The eFI is a concept-feature representation of frailty. It combines structured diagnosis/lab items and note-derived deficits. This is more interpretable than a black-box note embedding because each extracted item corresponds to a deficit category.
+The final eFI is a fixed-length concept-feature representation of frailty, built from 53 binary deficit items. It combines structured diagnosis/lab items and note-derived deficits extracted from raw free text by NLP-NER. This is more interpretable than a black-box note embedding because each extracted item corresponds to a deficit category. Longitudinal EHR data are summarized into annual eFI values and baseline eFI features for outcome models rather than consumed as raw variable-length event sequences.
 
 ### Baselines or Comparators
 The authors compare eFI performance with Hospital Frailty Risk Score and Charlson Comorbidity Index, each added to base models containing age and sex.

@@ -60,3 +60,6 @@ The paper informs the study design mainly through clinical language model or med
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review treats BioBERT as biomedical language-model background, not an EHR-note concept-extraction source. The EHR schema/CDM review adds that it has no meaningful operational EHR data-model contribution because the source text is biomedical literature rather than clinical notes.

@@ -15,6 +15,7 @@ We are conducting a literature review of papers relevant to our [problem stateme
 - [literature_review_outline.md](literature_review_outline.md) contains the simple human-facing outline of the review.
 - [literature_review_state.md](literature_review_state.md) tracks current evidence, gaps, and priorities relative to the outline.
 - [bibliography/](bibliography/) contains the BibTeX of the complete set of references. We expect this to be a strict superset of what we actually reference in our papers.
+- [ml_resources/](ml_resources/) contains practical educational resource guides for humans learning the core ML, NLP, EHR prediction, validation, and implementation technologies behind the review.
 - [agents/](agents/) contains agent definitions for the literature-review workflow.
 
 ## Workflow
@@ -37,3 +38,5 @@ Cross-paper synthesis is handled by the [synthesizer](agents/synthesizer.md). Th
 The [literature review state manager](agents/literature_review_state_manager.md) maintains [literature_review_state.md](literature_review_state.md) relative to [literature_review_outline.md](literature_review_outline.md). Keep the outline simple; put evidence status, gaps, and priorities in the state file.
 
 The [searcher](agents/searcher.md) uses the outline and state file to find candidate papers online that fill gaps, support claims, or challenge claims. Candidate papers selected by the human still enter the default paper workflow through the bibliographer, downloader, shelver, summarizer, reviewers, consolidator, and state manager.
+
+The [ML resource curator](agents/ml_resource_curator.md) maintains practical learning guides in [ml_resources/](ml_resources/). These guides are for team education and implementation orientation, not evidence for manuscript claims. Prefer secondary explanatory resources, tutorials, textbooks, lectures, and official documentation; include original papers only when they are unusually instructive or directly tied to methods in the review.

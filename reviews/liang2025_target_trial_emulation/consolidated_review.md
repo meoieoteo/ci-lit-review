@@ -60,3 +60,6 @@ The paper informs the study design mainly through target-trial and causal study-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review adds a timing discipline: note-derived features must obey eligibility and time-zero rules. The EHR schema/CDM review strengthens this paper's role in defining the fields the pipeline must represent: eligibility, index time, pre-index covariates, outcomes, follow-up, and censoring.

@@ -36,7 +36,7 @@ Observation window: Historical EHR visits before prediction.
 Prediction horizon or follow-up: The paper evaluates future clinical prediction tasks, including future heart failure diagnosis.
 
 ## Modeling Relevance
-RETAIN uses a two-level attention architecture over visits and variables, processed in reverse time. The model is trained end to end for supervised prediction.
+RETAIN uses a two-level attention architecture over visits and variables, processed in reverse time. The model is trained end to end for supervised prediction. Its key representation contribution is that it consumes variable-length visit sequences rather than collapsing the full EHR history into a single fixed-length tabular vector before modeling.
 
 ## Validation and Utility Signals
 The paper compares predictive accuracy, scalability, and interpretability against baselines.

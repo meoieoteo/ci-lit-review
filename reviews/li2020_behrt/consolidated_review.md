@@ -45,7 +45,7 @@ Average precision score for future disease prediction.
 The paper does not resolve downstream-action or diagnosis-opportunity bias for this project unless later source review shows otherwise.
 
 ## Implications for Study Design
-The paper informs the study design mainly through longitudinal EHR representation background. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
+The paper informs the study design mainly through longitudinal EHR representation background. It is most relevant if the project considers variable-length, time-aware EHR sequence inputs. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
 
 ## Claims to Carry Forward
 - The paper is relevant to longitudinal EHR representation background.
@@ -60,3 +60,6 @@ The paper informs the study design mainly through longitudinal EHR representatio
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review clarifies that BEHRT is not a text-extraction method, but extracted concepts could become structured sequence tokens. The EHR schema/CDM review strengthens BEHRT's relevance to model-ready longitudinal representation with age, time, and event sequence encoding, while noting that cardiology encounter anchoring and local concept mappings remain unresolved. The summary backfill reinforces that BEHRT is a variable-length, time-aware sequence model rather than a fixed-length tabular baseline.

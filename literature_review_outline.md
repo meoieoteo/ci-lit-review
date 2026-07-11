@@ -67,27 +67,34 @@
   - End-to-end LLM scoring only if justified.
 - Emphasize that model architecture is not the main contribution unless target and labels are defensible.
 
-## 9. Validation, Calibration, and Clinical Utility
+## 9. Modeling Strategy Resources
+
+- Maintain a separate practical resource guide in [ml_resources/](ml_resources/).
+- Curate secondary explanatory resources, textbooks, lectures, tutorials, and official documentation that help the team understand the modeling ladder in Section 8.
+- Use original papers selectively when they are unusually instructive or directly tied to reviewed methods.
+- Organize resources by topic, implementation stack, and intended audience.
+
+## 10. Validation, Calibration, and Clinical Utility
 
 - Review internal, temporal, site-level, and external validation.
 - Emphasize calibration, threshold performance, and workflow-specific utility.
 - Discuss sensitivity, specificity, PPV, NPV, calibration intercept/slope, and decision-curve or net-benefit analysis.
 - Evaluate transportability across sites, populations, EHR systems, note types, and documentation practices.
 
-## 10. Data Transformation and Reproducibility
+## 11. Data Transformation and Reproducibility
 
 - Review how Epic or local EHR data can be translated into reusable model-ready formats.
 - Consider OMOP or other common data model pathways.
 - Discuss reproducible feature definitions, note processing, code lists, and temporal extraction.
 - Identify which parts of the pipeline are site-specific versus portable.
 
-## 11. Sequential Diagnosis and Future Action Policy
+## 12. Sequential Diagnosis and Future Action Policy
 
 - Treat this as later-stage framing, not the first model's scope.
 - Review sequential diagnosis, active feature acquisition, value of information, POMDPs, and dynamic treatment regimes only insofar as they inform future work.
 - Clarify that the current model scores risk before the encounter and does not recommend next tests or referrals.
 
-## 12. Synthesis and Proposed Contribution
+## 13. Synthesis and Proposed Contribution
 
 - Summarize the strongest lessons from the literature.
 - Identify the main gap: careful target, label, cohort, timing, and validation design for pre-cardiology cognitive-risk scoring using longitudinal EHR text.
@@ -97,7 +104,7 @@
   - Explicit handling of downstream-action and diagnosis-opportunity bias.
   - Validation and calibration designed for clinical workflow.
 
-## 13. Open Questions
+## 14. Open Questions
 
 - What primary target should the first model use?
 - What label source is clinically meaningful and practically obtainable?

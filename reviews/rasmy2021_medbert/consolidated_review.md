@@ -45,7 +45,7 @@ AUC improvement across three fine-tuning cohorts and experiments with small trai
 The paper does not resolve downstream-action or diagnosis-opportunity bias for this project unless later source review shows otherwise.
 
 ## Implications for Study Design
-The paper informs the study design mainly through longitudinal EHR representation background. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
+The paper informs the study design mainly through longitudinal EHR representation background. It is relevant to structured visit/code sequence modeling, not to fixed-vector tabular baselines or note-text extraction. Any direct design adoption should be checked against the project's encounter-level index date and pre-index-only predictor rule.
 
 ## Claims to Carry Forward
 - The paper is relevant to longitudinal EHR representation background.
@@ -60,3 +60,6 @@ The paper informs the study design mainly through longitudinal EHR representatio
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review clarifies that Med-BERT is structured-code sequence modeling, not note extraction. The EHR schema/CDM review strengthens its role as a structured longitudinal representation source, while warning that diagnosis-code absence, visit grouping, and pre-index sequence construction must be handled explicitly. The summary backfill adds that it should be treated as a variable-length visit/code sequence model, with irregular-time handling still requiring source checking.

@@ -60,3 +60,6 @@ The paper informs the study design mainly through dynamic treatment regime or re
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm no direct NLP extraction role and only indirect schema relevance. The paper would require structured patient states, treatment histories, actions, and outcomes if the project later moves into policy learning.

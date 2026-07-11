@@ -60,3 +60,6 @@ The paper informs the study design mainly through clinical language model or med
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP/concept-extraction review narrows this paper to clinical language-model background rather than direct evidence for cognitive concept extraction. The EHR schema/CDM review adds that it provides little data-transformation guidance because MIMIC note pretraining does not specify this project's patient, encounter, timestamp, or Epic extraction requirements.

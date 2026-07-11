@@ -53,6 +53,7 @@ ml_ai_methods:
   specific_methods: []
   learning_setup: []
   input_modalities: []
+  input_representation: []
   prediction_task: []
   temporal_handling: []
   interpretability: []
@@ -171,6 +172,30 @@ For `input_modalities`, use one or more:
 - `demographics`
 - `other`
 
+For `input_representation`, use one or more:
+- `fixed_length_vector`
+- `bag_of_codes`
+- `bag_of_words_or_terms`
+- `engineered_features`
+- `concept_features`
+- `dense_embeddings`
+- `sequence_tokens`
+- `visit_sequence`
+- `event_sequence`
+- `time_aware_sequence`
+- `irregular_time_aware`
+- `raw_text`
+- `document_chunks`
+- `multimodal_features`
+- `not_reported`
+- `not_applicable`
+
+Use this field to distinguish whether the model collapses inputs into a fixed-length vector or accommodates variable-length histories and variable timing.
+
+Classify as `fixed_length_vector` when each patient, encounter, note, or sample is represented as a single fixed-size feature vector before modeling, even if the vector was derived from longitudinal history. Add more specific tags such as `engineered_features`, `concept_features`, `bag_of_codes`, or `dense_embeddings` when applicable.
+
+Classify as `sequence_tokens`, `visit_sequence`, or `event_sequence` when the model consumes an ordered sequence whose length may vary across patients or encounters. Add `time_aware_sequence` when the model encodes order, age, position, time gaps, or timestamps. Add `irregular_time_aware` only when the method explicitly represents irregular intervals or variable timing, not merely because EHR data are longitudinal.
+
 For `prediction_task`, use one or more:
 - `binary_classification`
 - `multiclass_classification`
@@ -206,6 +231,14 @@ For `interpretability`, use one or more:
 - `not_applicable`
 
 In the prose `### ML or AI Method Index` section, briefly explain the selected tags and identify the core modeling strategy in ordinary language.
+
+In the prose `### Model Inputs and Representations` section, explicitly answer:
+- What is the model's input unit: patient, encounter, visit, note, sentence, token, image, claim, feature vector, or sequence?
+- Does the model use a fixed-length vector, such as engineered tabular features, bag-of-codes, concept counts, embeddings, or summary statistics?
+- Does the model accommodate variable-length EHR histories, variable numbers of visits/events/notes, or variable note length?
+- Does the model explicitly encode time, visit order, age, position, time gaps, irregular intervals, or event timestamps?
+- If the paper starts from longitudinal EHR data but collapses it into fixed features, state that clearly.
+- If the representation is unclear, mark it as `not_reported` and describe what is missing.
 
 ## Summary Rules
 - Use concise prose.

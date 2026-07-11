@@ -60,3 +60,6 @@ The paper informs the study design mainly through sequential diagnosis, feature-
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The new specialist reviews confirm this paper belongs in the future feature-acquisition/action-policy layer. It does not support EHR note concept extraction or an Epic/CDM pipeline, but it may later motivate explicit feature availability and acquisition-cost metadata.

@@ -25,7 +25,7 @@ Strong. Ten eFI deficits come from free-text deep-learning NLP-NER, including fa
 The eFI labels are deficit-accumulation features rather than dementia outcomes. The note-derived neurocognitive-problem feature may be relevant to cognitive phenotyping, but it is not a validated dementia or cognitive-impairment reference standard.
 
 ## Modeling Relevance
-The modeling approach is interpretable feature construction plus statistical risk modeling. The NLP-NER component extracts clinical concepts from text; the risk analyses use Cox models, generalized additive mixed models, and count models rather than end-to-end neural prediction.
+The modeling approach is interpretable feature construction plus statistical risk modeling. The NLP-NER component extracts clinical concepts from text; the risk analyses use Cox models, generalized additive mixed models, and count models rather than end-to-end neural prediction. Longitudinal EHR and note evidence are ultimately collapsed into fixed binary deficit/concept features and annual or baseline eFI values for outcome modeling, rather than consumed as raw variable-length event sequences.
 
 ## Validation and Utility Signals
 The NLP-NER F1 scores range from 0.74 to 0.92 across extracted deficits. Outcome models use a 70/30 train-test split and compare eFI against HFRS and CCI. This is useful internal evidence but not independent external validation. Calibration is not clearly established from the summary.

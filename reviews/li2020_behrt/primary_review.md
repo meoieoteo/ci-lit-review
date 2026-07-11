@@ -11,7 +11,6 @@ Indirect fit to the current pre-cardiology cognitive-risk project. Its main valu
 
 ## Evidence Category
 - `longitudinal_ehr_representation`
-- `unstructured_ehr_text`
 
 ## Clinical Target
 Onset prediction for 301 medical conditions.
@@ -22,7 +21,7 @@ Clinical Practice Research Datalink linked with hospital and administrative data
 Population: Nearly 1.6 million individuals in the model evaluation described in the abstract.
 
 ## EHR Text Relevance
-Relevant because the paper concerns clinical text, NLP, speech/language, or language-model methods.
+Low direct EHR-text relevance. BEHRT models structured EHR concepts rather than clinical notes.
 
 Inputs or predictors: Structured EHR concepts such as diagnoses, medications, measurements, age, segment, and positional/time information.
 
@@ -36,7 +35,7 @@ Observation window: Longitudinal primary care and linked secondary care historie
 Prediction horizon or follow-up: Future onset of 301 conditions.
 
 ## Modeling Relevance
-The authors adapt transformer self-attention to EHR sequences and use BERT-style pre-training/fine-tuning ideas for disease trajectory modeling.
+The authors adapt transformer self-attention to EHR sequences and use BERT-style pre-training/fine-tuning ideas for disease trajectory modeling. The model represents variable-length longitudinal EHR histories as coded concept sequences with age, position, segment, and time-related embeddings, rather than as fixed-length tabular vectors.
 
 ## Validation and Utility Signals
 Average precision score for future disease prediction.

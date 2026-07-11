@@ -60,3 +60,6 @@ The paper informs the study design mainly through dementia, MCI, or Alzheimer di
 
 ## Recommended Next Action
 Use this consolidated review to update `literature_review_state.md`; source-check before using the paper as a central citation.
+
+## New Specialist Review Addendum
+The NLP and schema reviews both treat this as broad AD/MCI ML background, not a source for cardiology-note concept extraction or EHR data modeling. Its imaging/ADNI emphasis should be used mainly as contrast with routine-care EHR prediction.

@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [BEHRT, BERT]
   learning_setup: [self_supervised_learning, supervised_learning]
   input_modalities: [structured_ehr, diagnosis_codes, medications, procedures, demographics]
+  input_representation: [visit_sequence, sequence_tokens, time_aware_sequence, irregular_time_aware]
   prediction_task: [risk_prediction, multiclass_classification, representation_learning]
   temporal_handling: [visit_sequence, longitudinal_history, irregular_time_intervals]
   interpretability: [attention]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # li2020_behrt
@@ -60,7 +61,7 @@ The authors adapt transformer self-attention to EHR sequences and use BERT-style
 BEHRT is a transformer model for structured longitudinal EHR data.
 
 ### Model Inputs and Representations
-Patients are represented as sequences of coded clinical concepts with time and demographic embeddings.
+Patients are represented as variable-length sequences of coded clinical concepts with demographic, age, segment, position, and time-related embeddings. BEHRT is not a fixed-length tabular feature model; it adapts transformer sequence modeling to longitudinal EHR histories and explicitly represents timing information.
 
 ### Baselines or Comparators
 Existing deep EHR models.

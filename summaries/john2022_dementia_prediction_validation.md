@@ -9,11 +9,12 @@ ml_ai_methods:
   specific_methods: [Walters Dementia Risk Score, Mehta RxDx-Dementia Risk Index, Nori ADRD prediction model, OMOP CDM, OHDSI PLP]
   learning_setup: [supervised_learning]
   input_modalities: [claims, structured_ehr, diagnosis_codes, medications, demographics]
+  input_representation: [fixed_length_vector, engineered_features, bag_of_codes]
   prediction_task: [risk_prediction, binary_classification, survival_time_to_event]
   temporal_handling: [fixed_observation_window, time_to_event]
   interpretability: [coefficients, calibration]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-11
 ---
 
 # john2022_dementia_prediction_validation
@@ -60,7 +61,7 @@ The authors defined reporting criteria required for external validation, reviewe
 The reviewed literature includes Cox models, logistic regression, random forest, SVM, and other prediction methods. The external validation applies existing model specifications rather than training new models.
 
 ### Model Inputs and Representations
-Structured observational health data in OMOP CDM format.
+Structured observational health data are represented in OMOP CDM format and transformed into model-specific fixed-length predictor sets, such as demographic variables, diagnosis-code indicators, medication-derived predictors, and risk-score components. The externally validated models use fixed observation windows and time-at-risk definitions rather than variable-length EHR sequence modeling.
 
 ### Baselines or Comparators
 Development performance from original papers and external validation performance across databases.
