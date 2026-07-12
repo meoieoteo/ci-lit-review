@@ -71,6 +71,8 @@ Use this structure.
 
 ## What This Paper Should Not Be Cited For
 
+## Publication Status and Evidence Weight
+
 ## Evidence Strength
 
 ## Key Contributions
@@ -111,6 +113,7 @@ Use one or more:
 - `strong_direct_evidence`
 - `moderate_direct_evidence`
 - `weak_direct_evidence`
+- `lower_publication_weight`
 - `useful_analogy`
 - `methodological_caution`
 - `background_context`
@@ -142,6 +145,7 @@ When stating what the paper should be cited for, use one or more:
 - State whether the paper supports pre-cardiology-encounter risk scoring.
 - State whether the paper helps define the project's label, cohort, model inputs, validation plan, or bias strategy.
 - State whether the paper is mainly useful as positive evidence, cautionary evidence, or background.
+- Carry forward publication-status limitations from the summary and primary review. If a paper is direct but only available as a preprint, workshop abstract, protocol, dissertation, or otherwise non-final source, state how that affects citation use.
 - Do not cite high model performance as meaningful without considering label definition, leakage, validation, calibration, and utility concerns.
 - If a specialist review identifies a serious concern, carry it into the consolidated review unless another source directly resolves it.
 
@@ -157,6 +161,7 @@ Ask:
 Ask:
 - What exact claim could we cite this paper to support?
 - Is that claim supported by the paper's methods and validation?
+- Does the publication status make this better suited for background, method context, or hypothesis generation than for a central manuscript claim?
 - What claim would be an overreach?
 
 ### Cross-Reviewer Agreement
@@ -183,6 +188,7 @@ Ask:
 A consolidation is complete when:
 - `reviews/citation_key/consolidated_review.md` exists.
 - The consolidated review states what the paper should and should not be cited for.
+- The consolidated review carries forward publication status and evidence-weight limits.
 - Agreements, disagreements, limitations, and open questions are separated.
 - The paper's implications for this project's pre-cardiology-encounter risk-scoring problem are explicit.
 - Any missing review inputs are listed rather than silently ignored.

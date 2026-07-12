@@ -84,6 +84,8 @@ Write this schema to `reviews/citation_key/primary_review.md`.
 
 ## Review-Relevant Contribution
 
+## Publication Status and Evidence Weight
+
 ## Fit to Problem Statement
 
 ## Evidence Category
@@ -145,6 +147,21 @@ Use:
 - `needs_specialist_review`
 - `blocked_missing_source`
 
+## Publication Status and Evidence Weight Guidance
+Use `## Publication Status and Evidence Weight` to interpret how much the literature review should rely on this work, especially when publication status affects confidence.
+
+Record:
+- The neutral publication status from the summary or BibTeX record, such as peer-reviewed journal article, peer-reviewed conference paper, workshop abstract, preprint, accepted manuscript, protocol, dissertation, technical report, or unknown.
+- Whether the paper is direct, indirect, analogy, background, or counterevidence for this project.
+- Whether the work should be treated as high, moderate, or lower evidentiary weight for manuscript claims, and why.
+- Whether publication status limits use even when topical relevance is direct.
+
+Examples:
+- `Direct topical fit, but lower evidentiary weight for manuscript claims because the available source is a workshop abstract/preprint rather than an identified peer-reviewed full journal article. Use mainly for hypothesis generation or method context unless a later peer-reviewed version is found.`
+- `Peer-reviewed journal article with direct relevance, but evidence weight remains limited by single-site validation and unclear calibration.`
+
+Do not treat publication status as the only determinant of evidence strength. Also consider target clarity, label validity, cohort timing, validation design, calibration, clinical utility, transportability, and relevance to pre-cardiology risk scoring.
+
 ## Extraction Rules
 - Tie interpretations back to specific facts from the paper.
 - Distinguish direct evidence from analogy or extrapolation.
@@ -159,6 +176,7 @@ A primary reviewer task is complete when:
 - The evidence category or categories are identified.
 - The paper's relationship to the problem statement is clear.
 - Direct support and non-support are separated.
+- Publication status and evidence weight are explicitly interpreted.
 - The default specialist reviewers in [agents/specialist_reviewers/](specialist_reviewers/) have been called unless the human directed otherwise.
 - The review consolidator has been called unless the human directed otherwise.
 - Additional specialist review needs are listed.

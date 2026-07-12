@@ -192,6 +192,8 @@ For each candidate paper, use:
 ### citation_or_short_title
 
 - Status: new_candidate | already_in_bibliography | already_summarized | already_reviewed
+- Publication status: peer_reviewed_version_of_record | peer_reviewed_journal | peer_reviewed_conference | accepted_manuscript | workshop_abstract | conference_abstract | preprint | protocol | dissertation | technical_report | unknown
+- Search-stage evidence weight: high | moderate | lower | unclear
 - Relevance: direct | indirect | analogy | counterevidence | background
 - Supports:
 - Challenges:
@@ -200,6 +202,8 @@ For each candidate paper, use:
 - URL:
 - Suggested next step:
 ```
+
+At search stage, evidence weight is provisional. Use it only to explain intake priority, not to make manuscript claims. A candidate can be direct but still have lower search-stage evidence weight if it is only a preprint, workshop abstract, protocol, conference abstract, inaccessible source, or otherwise not clearly a peer-reviewed full paper. Final evidence weighting belongs in the primary review and consolidated review after summarization.
 
 ## Handoff to Paper Workflow
 When the human selects candidate papers for intake, hand them to the default workflow:

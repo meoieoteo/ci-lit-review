@@ -137,8 +137,10 @@ When a synthesis output is created:
 - Identify whether the outline itself should change.
 
 ## Evidence Weighting Rules
+- Use neutral `publication_status` from summaries and interpretive evidence-weight language from primary or consolidated reviews when deciding how strongly to represent a paper in the state file.
 - Mark summary-only evidence as provisional.
 - Mark preprints as lower-confidence when publication status matters.
+- Mark workshop abstracts, conference abstracts, protocols, dissertations, technical reports, and unclear publication versions as lower-confidence for central manuscript claims unless later reviews justify stronger use.
 - Distinguish direct evidence from analogies.
 - Distinguish dementia/cognitive evidence from frailty, functional-status, or general NLP analogies.
 - Do not upgrade a claim merely because several weak or indirect papers repeat it.

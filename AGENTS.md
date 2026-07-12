@@ -31,6 +31,8 @@ The default paper workflow is layered:
 6. Unless the human directs otherwise, every specialist reviewer in [agents/specialist_reviewers/](agents/specialist_reviewers/) runs and writes its own file under `reviews/citation_key/`.
 7. The [review consolidator](agents/review_consolidator.md) integrates the primary and specialist reviews for that single paper, writing to `reviews/citation_key/consolidated_review.md`.
 
+When processing multiple papers, complete this full lifecycle for one citation key before moving to the next citation key. Do not batch by workflow stage across papers unless the human explicitly requests that alternate traversal. In other words, avoid doing all summaries first, then all primary reviews, then all specialist reviews. The default traversal is paper-by-paper: summary, primary review, all specialist reviews, consolidation, then the next paper.
+
 The summarizer and primary reviewer are intentionally separate. The summarizer describes the paper without judging it. The primary reviewer interprets how the paper contributes to this literature review. Specialist reviewers assess bounded dimensions such as clinical relevance, EHR schema implications, NLP/modeling, causal bias, validation quality, target-trial design, and skeptical review.
 
 Cross-paper synthesis is handled by the [synthesizer](agents/synthesizer.md). The synthesizer looks across reviewed papers to identify major ideas, gaps, tensions, and implications for the review and study design. It is separate from the review consolidator, which works on one paper at a time.

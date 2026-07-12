@@ -47,6 +47,7 @@ citation_key:
 summary_status: draft
 source_status: full_text
 paper_type:
+publication_status:
 ml_ai_methods:
   uses_ml_ai:
   method_families: []
@@ -64,6 +65,8 @@ updated:
 # citation_key
 
 ## Bibliographic Record
+
+## Publication and Source Status
 
 ## Plain-Language Summary
 
@@ -111,8 +114,18 @@ updated:
 - `summary_status`: use `draft`, `complete`, or `needs_source`.
 - `source_status`: use `full_text`, `abstract_only`, `metadata_only`, or `human_notes_only`.
 - `paper_type`: use values such as `journal_article`, `preprint`, `conference_paper`, `dissertation`, `book`, `chapter`, `technical_report`, or `other`.
+- `publication_status`: record neutral publication/version information, such as `peer_reviewed_version_of_record`, `accepted_manuscript`, `peer_reviewed_conference`, `workshop_abstract`, `preprint`, `protocol`, `conference_abstract`, `dissertation`, `technical_report`, `unknown`, or a concise free-text equivalent when needed. This is descriptive metadata, not an evidentiary judgment.
 - `ml_ai_methods`: machine-readable index of machine learning or artificial intelligence methods used in the study. Record what the authors used; do not judge whether the method was appropriate.
 - `created` and `updated`: use `YYYY-MM-DD`.
+
+## Publication and Source Status Guidance
+In `## Publication and Source Status`, describe the version being summarized without judging its evidentiary strength. Include:
+- Whether the source is a peer-reviewed journal article, peer-reviewed conference paper, workshop abstract, preprint, protocol, accepted manuscript, dissertation, technical report, or unclear.
+- Whether the summary is based on full text, abstract only, metadata only, or human notes.
+- Whether a later peer-reviewed version, correction, retraction, or version-of-record is known.
+- Any mismatch between the BibTeX record, downloaded source, and publication page.
+
+Do not write evaluative language such as "weak evidence" or "lower confidence" in the neutral summary. If a work is a preprint or workshop abstract, state that fact plainly and leave evidence weighting to the reviewers.
 
 ## ML and AI Method Index
 Use the YAML `ml_ai_methods` block to support later searching and synthesis across papers.
@@ -253,5 +266,6 @@ A summarizer task is complete when:
 - A file exists at `summaries/citation_key.md`.
 - The summary uses the required schema.
 - The summary identifies the paper's question, data, methods, target, evaluation, findings, and author-stated limitations when available.
+- The summary records neutral publication and source status.
 - Missing or ambiguous information is explicitly marked.
 - The summary remains descriptive rather than evaluative.
