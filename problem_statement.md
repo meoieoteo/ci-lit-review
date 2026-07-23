@@ -1,5 +1,3 @@
-This first paragraph will be removed.  This document is a short first iteration of an action plan.  The audience is the internal team of MDs, database drivers, and assorted managers on the data side of the house. The objectives are (1) marshal the group to actually start, rather than just trading emails (2) to build trust with the MDs and (3) make data managers allocate resources to get this done.  Retain the outline as defined by the markdown headers.  You may add headers if you wish.
-
 ## Problem definition 
 With the strong correlation of cardiovascular health to an increased likelihood of cognitive impairment, a cardiologist will, at each patient encounter, look for any indicators of impairment, assess the likelihood of near-future impairment, and recommend one of:
 - No immediate action
